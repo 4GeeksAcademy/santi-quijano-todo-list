@@ -7,8 +7,6 @@ function Home() {
 	const deleteTask = (indexToDelete) => {
 		setTasks((prevTasks) => prevTasks.filter((task, index) => index !== indexToDelete));
 	};
-
-
 	return (
 		<div className="container">
 			<h1 className="text-muted">todos</h1>
@@ -16,7 +14,6 @@ function Home() {
 			<ul>
 				{tasks.length === 0 && <li>No tasks, add a task</li>}
 				{tasks.map((task, index) => (
-
 					<li key={index}>
 						<p>{task}</p>
 						<button className="erase" onClick={() => deleteTask(index)}>X</button>
